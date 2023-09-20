@@ -12,8 +12,6 @@ export default async function Project({ params }: Props) {
 
     const project = await getProject(slug)
 
-
-
     return (
         <div>
             <header className="flex items-center justify-between">

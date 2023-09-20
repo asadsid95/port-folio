@@ -6,7 +6,7 @@ export default async function Home() {
 
   const projects = await getProjects()
 
-  console.log(projects)
+  // console.log(projects)
 
   return (
     <div>
