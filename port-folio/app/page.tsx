@@ -1,4 +1,5 @@
 import { getProjects } from "@/sanity/sanity-utils"
+import { Project } from "@/types/Project"
 
 export default async function Home() {
 
