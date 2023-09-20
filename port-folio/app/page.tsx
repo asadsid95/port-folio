@@ -9,8 +9,7 @@ export default async function Home() {
   console.log(projects)
 
   return (
-    <div
-      className="max-w-5xl mx-auto py-20">
+    <div>
 
       <h1 className="text-5xl font-extrabold">Hello, I&apos;m <span className="bg-gradient-to-r from-stone-500 via-blue-400 to-orange-500 bg-clip-text text-transparent">Asad</span>!</h1>
 
