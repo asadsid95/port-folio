@@ -1,7 +1,6 @@
 import { defineConfig } from "sanity";
 import { deskTool } from "sanity/desk";
 import schemas from './sanity/schemas'
-import project from "./sanity/schemas/project-schema";
 
 const config = defineConfig({
     projectId: 'bkrqoana',

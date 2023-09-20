@@ -3,7 +3,6 @@ import { createClient, groq } from "next-sanity";
 
 // create client to pull all projects
 export async function getProjects() {
-
     // create client
     const client = createClient({
         projectId: 'bkrqoana',
@@ -14,12 +13,12 @@ export async function getProjects() {
 
     // use client to pull project using GROQ
     return client.fetch(
-        groq`*[_type = 'project']{
+        groq`*[_type == "project"]{
             _id,
             _createdAt,
             name,
             "slug": slug.current,
-            'image': image.asset->url,
+            "image": image.asset->url,
             url,
             content
         }`
