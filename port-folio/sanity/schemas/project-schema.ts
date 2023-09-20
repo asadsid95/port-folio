@@ -31,7 +31,7 @@ const project = {
         },
         {
             name: 'url',
-            title: 'Url',
+            title: 'URL',
             type: 'url'
         },
         {
