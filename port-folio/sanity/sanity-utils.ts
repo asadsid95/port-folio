@@ -23,7 +23,7 @@ export async function getProject(slug: string): Promise<Project> {
     const client = createClient({
         projectId: 'bkrqoana',
         dataset: 'production',
-        apiVersion: "2023-09-19",
+        apiVersion: "2023-09-20",
     }
     )
 

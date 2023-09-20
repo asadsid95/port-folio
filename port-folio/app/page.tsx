@@ -6,6 +6,8 @@ export default async function Home() {
 
   const projects = await getProjects()
 
+  console.log(projects)
+
   return (
     <div
       className="max-w-5xl mx-auto py-20">
@@ -20,6 +22,7 @@ export default async function Home() {
 
       <div className="mt-5 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 ">
         {projects.map((project) => (
+
           <Link
             href={`/projects/${project.slug}`}
             key={project._id}
