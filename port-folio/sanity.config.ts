@@ -2,6 +2,8 @@ import { defineConfig } from "sanity";
 import { deskTool } from "sanity/desk";
 import schemas from './sanity/schemas'
 
+
+// this config generates studio
 const config = defineConfig({
     projectId: 'bkrqoana',
     dataset: 'production',
