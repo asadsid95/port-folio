@@ -9,8 +9,6 @@ export default async function Page({ params }: Props) {
 
     const page = await getPage(params.slug)
 
-    console.log('page: ', page)
-
     return (
         <div>
             <h1 className="

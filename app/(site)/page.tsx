@@ -6,8 +6,6 @@ export default async function Home() {
 
   const projects = await getProjects()
 
-  console.log(projects)
-
   return (
     <div
       className="max-w-5xl mx-auto py-20">
@@ -34,7 +32,7 @@ export default async function Home() {
                 alt={project.name}
                 width={250}
                 height={250}
-                className="object-cover rounded-lg border border-gray-500 hover:scale-105 hover:border-red-500 transition "
+                className="object-cover rounded-lg border border-gray-500 hover:scale-105 hover:border-gray-500 transition "
               />
             )}
 
