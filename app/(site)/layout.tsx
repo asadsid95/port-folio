@@ -4,7 +4,6 @@ import { Inter } from 'next/font/google'
 import Link from 'next/link'
 import { getPages } from '@/sanity/sanity-utils';
 
-
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
@@ -22,15 +21,15 @@ export default async function RootLayout({
   return (
     <html lang="en">
 
-      <body className={`${inter.className} max-w-3xl mx-auto py-10`}>
-        <header className='flex items-center justify-between'>
+      <body className={`${inter.className} mx-auto bg-[#4f5056]`}>
+        <header className='w-full flex items-center justify-between py-3 px-9 text-white selection:text-black '>
           <Link href='/'
-            className='font-bold text-lg bg-gradient-to-r from-stone-500 via-blue-400 to-orange-500 bg-clip-text text-transparent'
+            className='font-bold text-6xl'
           >
             Asad
           </Link>
 
-          <div className='flex items-center gap-5 text-sm text-gray-600'>
+          <div className='max-w-5xl flex items-center gap-5 text-md font-bold text-gray-400'>
             {pages.map((page) => (
               <Link key={page._id}
                 href={`/${page.slug}`}
@@ -42,7 +41,7 @@ export default async function RootLayout({
           </div>
 
         </header>
-        <main className='py-20'>
+        <main className='py-10'>
           {children}
         </main>
       </body>

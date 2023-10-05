@@ -39,6 +39,12 @@ const project = {
             title: 'Content',
             type: 'array',
             of: [{ type: 'block' }]
+        },
+        {
+            name: 'listOfTechnologies',
+            title: 'List of Technologies',
+            type: 'array',
+            of: [{ type: 'block' }]
         }
     ]
 }
