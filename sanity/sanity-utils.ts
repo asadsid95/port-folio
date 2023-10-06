@@ -16,7 +16,10 @@ export async function getProjects(): Promise<Project[]> {
             "image": image.asset->url,
             url,
             content,
-            listOfTechnologies
+            listOfTechnologies,
+            role,
+            responsibilities,
+            lessonsLearned
         }`
     )
 }
@@ -33,7 +36,10 @@ export async function getProject(slug: string): Promise<Project> {
             "image": image.asset->url,
             url,
             content,
-            listOfTechnologies
+            listOfTechnologies,
+            role,
+            responsibilities,
+            lessonsLearned
         }`,
         { slug }
     )
@@ -58,7 +64,10 @@ export async function getPage(slug: string): Promise<Page> {
         _createdAt,
         title,
         "slug": slug.current,
-        content
+        image,
+        history,
+        excites,
+        skills,
       }`,
         { slug }
     )

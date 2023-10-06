@@ -9,4 +9,8 @@ export type Project = {
     url: string;
     content: PortableTextBlock[];
     listOfTechnologies: PortableTextBlock[];
+    role: string;
+    responsibilities: PortableTextBlock[];
+    lessonsLearned: PortableTextBlock[];
+
 }

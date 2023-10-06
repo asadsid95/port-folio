@@ -45,7 +45,25 @@ const project = {
             title: 'List of Technologies',
             type: 'array',
             of: [{ type: 'block' }]
-        }
+        },
+        {
+            name: 'role',
+            title: 'Role',
+            type: 'string',
+        },
+        {
+            name: 'responsibilities',
+            title: 'Responsibilities',
+            type: 'array',
+            of: [{ type: 'block' }]
+        },
+        {
+            name: 'lessonsLearned',
+            title: 'Lessons Learned',
+            type: 'array',
+            of: [{ type: 'block' }]
+        },
+
     ]
 }
 

@@ -1,5 +1,6 @@
 import { getPage } from "@/sanity/sanity-utils";
 import { PortableText } from "@portabletext/react";
+import Image from 'next/image'
 
 type Props = {
     params: { slug: string }
@@ -16,9 +17,14 @@ export default async function Page({ params }: Props) {
                 {page.title}
             </h1>
 
+            <div>
+                <Image src='public\next.svg' alt={page.title} width={320} height={320} />
+            </div>
+
+
             <div className="text-lg mt-10 text-gray-700">
 
-                <PortableText value={page.content} />
+                {/* <PortableText value={page.content} /> */}
             </div>
 
         </div>

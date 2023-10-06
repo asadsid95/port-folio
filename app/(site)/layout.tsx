@@ -21,8 +21,8 @@ export default async function RootLayout({
   return (
     <html lang="en">
 
-      <body className={`${inter.className} mx-auto bg-[#4f5056]`}>
-        <header className='w-full flex items-center justify-between py-3 px-9 text-white selection:text-black '>
+      <body className={`${inter.className} mx-auto bg-[#61e786]`}>
+        <header className='w-full flex items-center justify-between py-1 px-9 text-gray-400 selection:text-white bg-[#EDFFEC] '>
           <Link href='/'
             className='font-bold text-6xl'
           >
@@ -41,10 +41,13 @@ export default async function RootLayout({
           </div>
 
         </header>
-        <main className='py-10'>
+        <main >
           {children}
         </main>
       </body>
+      {/* <footer className='border-2 border-red-500'>
+        Date and time
+      </footer> */}
     </html>
   )
 }

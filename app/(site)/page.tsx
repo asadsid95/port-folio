@@ -9,9 +9,9 @@ export default async function Home() {
 
 
   return (
-    <div className="max-w-7xl mx-auto py-20 text-center">
+    <div className="max-w-7xl mx-auto py-20 text-center ">
 
-      <h1 className="text-5xl font-extrabold text-gray-400">Welcome to my<span className="text-white"> Portfolio</span>!</h1>
+      <h1 className="text-5xl font-extrabold text-gray-400">Welcome to my<span > Portfolio</span>!</h1>
 
       <p className="my-6 text-xl font-bold text-gray-400">I like to take apart things and then rebuild them.</p>
 

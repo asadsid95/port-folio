@@ -5,5 +5,9 @@ export type Page = {
     _createdAt: Date,
     title: string,
     slug: string,
-    content: PortableTextBlock[]
+    image: string;
+    history: PortableTextBlock[];
+    excites: PortableTextBlock[];
+    skills: PortableTextBlock[];
+
 };
