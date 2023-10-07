@@ -22,7 +22,7 @@ export default async function RootLayout({
     <html lang="en">
 
       <body className={`${inter.className} mx-auto bg-[#61e786]`}>
-        <header className='w-full flex items-center justify-between py-1 px-9 text-gray-400 selection:text-white bg-[#EDFFEC] '>
+        {/* <header className='w-full flex items-center justify-between py-1 px-9 text-gray-400 selection:text-white bg-[#EDFFEC] '>
           <Link href='/'
             className='font-bold text-6xl'
           >
@@ -40,7 +40,8 @@ export default async function RootLayout({
             ))}
           </div>
 
-        </header>
+        </header> */}
+
         <main >
           {children}
         </main>

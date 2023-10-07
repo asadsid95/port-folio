@@ -21,15 +21,6 @@ export default async function Project({ params }: Props) {
                     </h1>
                 </a>
 
-
-                {/* {project.url && (
-                    <a href={project.url} title='View Project' target='_blank' rel='noopener noreferrer'
-                        className="bg-gray-100 rounded-lg text-gray-500 font-bold py-3 px-4 whitespace-nowrap hover:bg-gray-500 hover:text-pink-100 transition ">
-                        View Project
-                    </a>
-
-
-                )} */}
             </header>
 
             {project.content && (
