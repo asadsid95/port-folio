@@ -21,7 +21,7 @@ export default async function RootLayout({
   return (
     <html lang="en">
 
-      <body className={`${inter.className} mx-auto bg-[#61e786]`}>
+      <body className={`${inter.className} bg-[#1f5673] text-white`}>
         {/* <header className='w-full flex items-center justify-between py-1 px-9 text-gray-400 selection:text-white bg-[#EDFFEC] '>
           <Link href='/'
             className='font-bold text-6xl'
