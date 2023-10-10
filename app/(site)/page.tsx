@@ -21,7 +21,7 @@ async function App() {
 
                 <h1 className="text-5xl font-extrabold my-5"><a href='/' className=' shadow-md'> Asad Siddiqui</a></h1>
                 <p className='mt-4 text-lg font-medium '><span className=''>Status: </span>Looking for the next thing</p>
-                <p className='mt-4 text-gray-500 text-lg font-semibold'>I want to build oftwares</p>
+                <p className='mt-4 text-gray-500 text-lg font-semibold'>I want to build softwares</p>
 
                 <div className='mt-5'>
                     <a href={`${pages.resume}?dl=Resume.pdf`}>
