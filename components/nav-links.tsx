@@ -1,7 +1,6 @@
 'use client'
 
 import { useRef } from "react";
-import { ProjectSection } from "./projects-section";
 import Link from "next/link";
 import Image from "next/image";
 import { PortableText } from "@portabletext/react";
