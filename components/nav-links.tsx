@@ -8,12 +8,12 @@ import { PortableText } from "@portabletext/react";
 
 const navLinks = ['About', 'Projects']
 
-export const NavLink = ({ projects }) => {
+export const NavLink = ({ projects }: any) => {
 
     const aboutRef = useRef(null);
     const projectsRef = useRef(null);
 
-    const scrollToSection = (ref) => {
+    const scrollToSection = (ref: any) => {
         ref.current.scrollIntoView({ behavior: 'smooth' });
     };
 
@@ -35,7 +35,7 @@ export const NavLink = ({ projects }) => {
 
                 <section ref={projectsRef} className='bg-black/50 scroll-mt-10 mb-36'>
                     <div className="flex flex-col items-center justify-center ">
-                        {projects.map((project) => (
+                        {projects.map((project: any) => (
 
                             <Link
                                 href={`/projects/${project.slug}`}
