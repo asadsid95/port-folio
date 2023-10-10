@@ -51,6 +51,12 @@ const page = {
                 { type: "block" }
             ]
         },
+        {
+            name: 'resume',
+            title: 'Resume',
+            type: 'file'
+        }
+
     ]
 }
 

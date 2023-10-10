@@ -69,6 +69,7 @@ export async function getPage(): Promise<Page> {
         history,
         excites,
         skills,
+        "resume": resume.asset->url
       }`,
     )
 }

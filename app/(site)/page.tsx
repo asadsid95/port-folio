@@ -8,6 +8,12 @@ async function App() {
 
     const projects = await getProjects()
     const pages = await getPage()
+    console.log('hello1111111111111111111111111111')
+    console.log(pages.resume)
+
+    // const downloadFile = () => {
+    //     pages.resumeURL
+    // }
 
     return (
         <>
@@ -18,15 +24,14 @@ async function App() {
                 <p className='mt-4 text-gray-500 text-lg font-semibold'>I want to build oftwares</p>
 
                 <div className='mt-5'>
-                    <button className="bg-[#f2cd87] px-4 py-2 rounded-md shadow-lg w-36">
-                        Download CV
-                    </button>
+                    <a href={`${pages.resume}?dl=Resume.pdf`}>
+                        <button className="bg-[#f2cd87] px-4 py-2 rounded-md shadow-lg w-36">
+                            Download CV
+                        </button>
+
+                    </a>
                 </div>
-                {/* <a
-                    className='cursor-pointer text-blue-600 underline bg-black/40 my-4 '
-                    href="" download>
-                    Download Resume
-                </a> */}
+
             </header >
 
             <NavLink projects={projects} />

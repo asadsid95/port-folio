@@ -9,5 +9,6 @@ export type Page = {
     history: PortableTextBlock[];
     excites: PortableTextBlock[];
     skills: PortableTextBlock[];
+    resume: string
 
 };
