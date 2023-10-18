@@ -1,13 +1,30 @@
 // 'use client'
 
 import { getPage, getProjects } from '@/sanity/sanity-utils';
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { NavLink } from '@/components/nav-links';
 
 async function App() {
 
     const projects = await getProjects()
     const pages = await getPage()
+    const projectsRef = useRef(null);
+
+    // Add a scroll event listener
+    useEffect(() => {
+        const handleScroll = () => {
+            if (window.scrollY > 50) {
+                projectsRef.current.scrollIntoView({ behavior: 'smooth' });
+            }
+        };
+
+        window.addEventListener('scroll', handleScroll);
+
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
+    }, []);
+
     console.log('hello1111111111111111111111111111')
     console.log(pages.resume)
 
@@ -34,7 +51,7 @@ async function App() {
 
             </header >
 
-            <NavLink projects={projects} />
+            <NavLink projects={projects} ref={projectsRef} />
         </>
 
     );
