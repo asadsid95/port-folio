@@ -24,7 +24,7 @@ export const NavLink = ({ projects }: any) => {
                 <nav className="w-full text-4xl z-20 sticky top-52">
                     <ul className='' >
 
-                        <li className='active:text-gray-500' onClick={() => scrollToSection(projectsRef)}>Projects</li>
+                        <li className='active:text-gray-500 nav-link' onClick={() => scrollToSection(projectsRef)}>Projects</li>
                         {/* <li className='active:text-gray-500' onClick={() => scrollToSection(aboutRef)}>About</li> */}
 
                     </ul>
@@ -40,8 +40,7 @@ export const NavLink = ({ projects }: any) => {
                             <Link
                                 href={`/projects/${project.slug}`}
                                 key={project._id}
-
-                                className="group p-3 gap-3 flex justify-between text-white  "
+                                className="group p-3 gap-3 flex justify-between text-white project-item"
                             >
                                 <div className="flex items-center group-hover:scale-105 group-hover:bg-gray-700 group-hover:rounded-md transition">
 
