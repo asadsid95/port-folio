@@ -31,3 +31,19 @@ body,
     )
     rgb(var(--background-start-rgb));
 } */
+
+/* Add new styles */
+.project-item {
+  padding: 10px;
+  transition: transform 0.3s ease;
+}
+
+.project-item:hover {
+  transform: scale(1.05);
+}
+
+/* Add new CSS class for the 'Project' link */
+.nav-link {
+  font-weight: bold;
+  padding-left: 10px;
+}
