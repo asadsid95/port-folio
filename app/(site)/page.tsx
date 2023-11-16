@@ -1,12 +1,13 @@
 // 'use client'
 
-import { getPage, getProjects } from "@/sanity/sanity-utils";
+import { getBlogs, getPage, getProjects } from "@/sanity/sanity-utils";
 import React from "react";
 import { NavLink } from "@/components/nav-links";
 
 async function App() {
   const projects = await getProjects();
   const pages = await getPage();
+  const blogs = await getBlogs();
 
   // const downloadFile = () => {
   //     pages.resumeURL
@@ -34,7 +35,7 @@ async function App() {
         </div>
       </header>
 
-      <NavLink projects={projects} />
+      <NavLink projects={projects} blogs={blogs} />
     </>
   );
 }

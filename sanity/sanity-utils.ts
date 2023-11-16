@@ -70,19 +70,30 @@ export async function getPage(): Promise<Page> {
       }`
   );
 }
-// export async function getPage(slug: string): Promise<Page> {
-//     return createClient(clientConfig).fetch(
-//         groq`*[_type == "page" && slug.current == $slug][0]{
-//         _id,
-//         _createdAt,
-//         title,
-//         "slug": slug.current,
-//         "image": image.asset->url,
-//         url,
-//         history,
-//         excites,
-//         skills,
-//       }`,
-//         { slug }
-//     )
-// }
+
+export async function getBlogs() {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == "blog"]{
+      _id,
+      _createdAt,
+      name,
+      content, 
+      "image": image.asset->url,
+      "slug": slug.current
+    }`
+  );
+}
+
+export async function getBlog(slug) {
+  return createClient(clientConfig).fetch(
+    groq`*[_type == "blog" && slug.current == $slug][0]{
+      _id,
+      _createdAt,
+      name,
+      content, 
+      "image": image.asset->url,
+      "slug": slug.current
+    }`,
+    { slug }
+  );
+}
