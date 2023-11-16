@@ -26,12 +26,12 @@ export const NavLink = ({ projects, blogs }: any) => {
             >
               Projects
             </li>
-            <li
+            {/* <li
               className="active:text-gray-500"
               onClick={() => scrollToSection(blogRef)}
             >
               Blog
-            </li>
+            </li> */}
           </ul>
         </nav>
       </div>
@@ -79,7 +79,7 @@ export const NavLink = ({ projects, blogs }: any) => {
         </section>
 
         {/* Blog sections */}
-        <section ref={blogRef} className="bg-black/30 scroll-mt-16 mb-36">
+        {/* <section ref={blogRef} className="bg-black/30 scroll-mt-16 mb-36">
           <div className="flex flex-col items-center justify-center ">
             {blogs.map((blog: any) => (
               <Link
@@ -104,7 +104,7 @@ export const NavLink = ({ projects, blogs }: any) => {
               </Link>
             ))}
           </div>
-        </section>
+        </section> */}
       </div>
     </div>
   );

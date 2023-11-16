@@ -3,6 +3,7 @@
 import { getBlogs, getPage, getProjects } from "@/sanity/sanity-utils";
 import React from "react";
 import { NavLink } from "@/components/nav-links";
+import { Blog } from "@/components/blog";
 
 async function App() {
   const projects = await getProjects();
@@ -36,6 +37,7 @@ async function App() {
       </header>
 
       <NavLink projects={projects} blogs={blogs} />
+      <Blog blogs={blogs} />
     </>
   );
 }
