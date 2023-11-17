@@ -19,7 +19,7 @@ export default async function RootLayout({
   const pages = await getPages();
   return (
     <html lang="en">
-      <body className={`${inter.className} bg-[#1f5673] text-white`}>
+      <body className={`${inter.className} text-black`}>
         {/* <header className='w-full flex items-center justify-between py-1 px-9 text-gray-400 selection:text-white bg-[#EDFFEC] '>
           <Link href='/'
             className='font-bold text-6xl'

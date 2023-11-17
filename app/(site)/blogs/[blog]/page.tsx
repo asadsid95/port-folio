@@ -12,7 +12,7 @@ export default async function Blog({ params }: Props) {
   const blog = await getBlog(slug);
 
   return (
-    <div className="max-w-3xl mx-auto py-5  h-[100vh] text-center bg-white">
+    <div className="max-w-3xl mx-auto py-5 h-[100vh] text-center bg-white">
       <header className="py-5">
         <div className="text-gray-400">
           <p>Written by Asad </p>
