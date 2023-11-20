@@ -73,7 +73,7 @@ export async function getPage(): Promise<Page> {
 
 export async function getBlogs() {
   return createClient(clientConfig).fetch(
-    groq`*[_type == "blog"] | order(name asc) {
+    groq`*[_type == "blog"] | order(_updatedAt desc) {
       _id,
       _createdAt,
       name,

@@ -9,7 +9,7 @@ export const Blog = ({ blogs }: any) => {
       <section className="bg-black/30 scroll-mt-16 mb-36">
         <h1 className="text-4xl text-center">Blog</h1>
         <div className="flex items-center justify-center ">
-          {blogs.map((blog: any) => (
+          {blogs.slice(0, 3).map((blog: any) => (
             <Link
               href={`/blogs/${blog.slug}`}
               key={blog._id}
@@ -31,6 +31,14 @@ export const Blog = ({ blogs }: any) => {
               </div>
             </Link>
           ))}
+        </div>
+        <div className="text-right ">
+          <Link
+            href={"/blogs"}
+            className=" mr-4 text-blue hover:text-blue hover:font-bold transition"
+          >
+            See more blogs
+          </Link>
         </div>
       </section>
     </>

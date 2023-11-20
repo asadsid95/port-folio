@@ -19,7 +19,7 @@ export default async function RootLayout({
   const pages = await getPages();
   return (
     <html lang="en">
-      <body className={`${inter.className} text-black`}>
+      <body className={`${inter.className} `}>
         {/* <header className='w-full flex items-center justify-between py-1 px-9 text-gray-400 selection:text-white bg-[#EDFFEC] '>
           <Link href='/'
             className='font-bold text-6xl'
@@ -42,9 +42,6 @@ export default async function RootLayout({
 
         <main>{children}</main>
       </body>
-      {/* <footer className='border-2 border-red-500'>
-        Date and time
-      </footer> */}
     </html>
   );
 }
