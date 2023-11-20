@@ -1,18 +1,30 @@
-// 'use client'
+"use client";
 
 import { getBlogs, getPage, getProjects } from "@/sanity/sanity-utils";
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { NavLink } from "@/components/nav-links";
 import { Blog } from "@/components/blog";
+import MoreContentArrow from "@/components/morecontentArrow";
 
-async function App() {
-  const projects = await getProjects();
-  const pages = await getPage();
-  const blogs = await getBlogs();
+//@ts-ignore
+function App() {
+  const [projects, setProjects]: any[] = useState([]);
+  const [pages, setPages]: any[] = useState([]);
+  const [blogs, setBlogs] = useState([]);
 
-  // const downloadFile = () => {
-  //     pages.resumeURL
-  // }
+  useEffect(() => {
+    const getData = async () => {
+      const allProjects = await getProjects();
+      const allPages = await getPage();
+      const allBlogs = await getBlogs();
+
+      setProjects(allProjects);
+      setPages(allPages);
+      setBlogs(allBlogs);
+    };
+
+    getData();
+  }, []);
 
   return (
     <>
@@ -34,6 +46,7 @@ async function App() {
             </button>
           </a>
         </div>
+        <MoreContentArrow />
       </header>
 
       <NavLink projects={projects} blogs={blogs} />

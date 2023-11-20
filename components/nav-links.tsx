@@ -17,7 +17,7 @@ export const NavLink = ({ projects, blogs }: any) => {
 
   return (
     <div className="flex justify-between px-4 bg-black/40 ">
-      <div className="w-full text-center  sticky top-0">
+      <div id="projects" className="w-full text-center  sticky top-0">
         <nav className="w-full text-4xl z-20 sticky top-52">
           <ul className="">
             <li
