@@ -19,27 +19,7 @@ export default async function RootLayout({
   const pages = await getPages();
   return (
     <html lang="en">
-      <body className={`${inter.className} border-2 border-blue-500 back`}>
-        {/* <header className='w-full flex items-center justify-between py-1 px-9 text-gray-400 selection:text-white bg-[#EDFFEC] '>
-          <Link href='/'
-            className='font-bold text-6xl'
-          >
-            Asad
-          </Link>
-
-          <div className='max-w-5xl flex items-center gap-5 text-md font-bold text-gray-400'>
-            {pages.map((page) => (
-              <Link key={page._id}
-                href={`/${page.slug}`}
-                className='hover:underline'
-              >
-                {page.title}
-              </Link>
-            ))}
-          </div>
-
-        </header> */}
-
+      <body className={`${inter.className}`}>
         <main>{children}</main>
       </body>
     </html>
