@@ -19,7 +19,7 @@ export const NavLink = ({ projects, blogs }: any) => {
     <div className="flex justify-between ">
       <div id="projects" className="w-full text-center ">
         <p
-          className=" text-4xl font-bold sticky top-52"
+          className=" text-4xl font-bold sticky top-52 hover:text-[#f2cd87] transition duration-300 "
           onClick={() => scrollToSection(projectsRef)}
         >
           Projects
@@ -55,10 +55,10 @@ export const NavLink = ({ projects, blogs }: any) => {
                     />
                   )}
                 </div>
-                <div className="flex flex-col whitespace-pre-wrap text-center w-[30vw]">
+                <div className="flex flex-col items-center w-[30vw]">
                   <div className="font-extrabold ">{project.name}</div>
 
-                  <div className="font-semibold text-xs ">
+                  <div className="font-semibold text-xs max-w-sm text-center">
                     <PortableText value={project.content} />
                   </div>
                   <div className="font-base text-xs mt-3">

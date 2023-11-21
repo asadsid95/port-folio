@@ -8,7 +8,7 @@ import { useEffect, useState } from "react";
 export default function AllBlogs() {
   const [blogs, setBlogs] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  const postsPerPage = 2;
+  const postsPerPage = 6;
 
   useEffect(() => {
     // fetching all blog posts from sanity
@@ -23,7 +23,7 @@ export default function AllBlogs() {
 
   const totalPages = Math.ceil(blogs.length / postsPerPage);
 
-  const handlePageChange = (newPage) => {
+  const handlePageChange = (newPage: any) => {
     setCurrentPage(newPage);
   };
 
@@ -34,17 +34,20 @@ export default function AllBlogs() {
 
   return (
     <>
-      <h1 className="text-4xl text-center">Blog</h1>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <p className="text-4xl font-bold text-center mt-10 hover:text-[#f2cd87] transition duration-300 ">
+        Blog
+      </p>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mx-5 mt-10">
         {blogs
           .slice((currentPage - 1) * postsPerPage, currentPage * postsPerPage)
           .map((blog: any) => (
             <Link
               href={`/blogs/${blog.slug}`}
               key={blog._id}
-              className="group p-3 gap-3 flex justify-between text-white  "
+              className="group p-3 gap-3 flex flex-col justify-center items-center text-center hover:bg-gray-300 rounded-md max-w-sm "
             >
-              <div className="flex items-center group-hover:scale-105 group-hover:bg-gray-700 group-hover:rounded-md transition">
+              <div className="group-hover:scale-105 transition">
                 {blog.image && (
                   <Image
                     src={blog.image}
@@ -55,14 +58,14 @@ export default function AllBlogs() {
                   />
                 )}
               </div>
-              <div className="flex flex-col text-black">
-                <div className="font-extrabold ">{blog.name}</div>
+              <div className="">
+                <div className="font-extrabold">{blog.name}</div>
               </div>
             </Link>
           ))}
       </div>
 
-      <div>
+      {/* <div>
         <button
           onClick={() => handlePageChange(currentPage - 1)}
           disabled={currentPage === 1}
@@ -82,7 +85,7 @@ export default function AllBlogs() {
         >
           Next
         </button>
-      </div>
+      </div> */}
     </>
   );
 }
