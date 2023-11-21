@@ -28,13 +28,13 @@ export const NavLink = ({ projects, blogs }: any) => {
 
       <div className="w-full">
         {/* Projects section */}
-        <section ref={projectsRef} className="scroll-mt-10 text-black">
-          <div className="flex flex-col items-center justify-between space-y-5">
+        <section ref={projectsRef} className="scroll-mt-10 text-black ">
+          <div className="flex flex-col items-center justify-between space-y-5 ">
             {projects.map((project: any) => (
               <Link
                 href={`/projects/${project.slug}`}
                 key={project._id}
-                className="group hover:bg-gray-300 p-3 gap-3 flex justify-between transition rounded-md max-w-3xl border-2 border-red-400"
+                className="group p-3 gap-3 flex justify-between transition rounded-md hover:bg-gray-300 "
               >
                 <div className="flex items-center group-hover:scale-110 duration-100 ">
                   {project.image ? (
@@ -55,10 +55,10 @@ export const NavLink = ({ projects, blogs }: any) => {
                     />
                   )}
                 </div>
-                <div className="flex flex-col whitespace-pre-wrap text-center">
+                <div className="flex flex-col whitespace-pre-wrap text-center w-[30vw]">
                   <div className="font-extrabold ">{project.name}</div>
 
-                  <div className="font-semibold text-xs flex flex-wrap">
+                  <div className="font-semibold text-xs ">
                     <PortableText value={project.content} />
                   </div>
                   <div className="font-base text-xs mt-3">
