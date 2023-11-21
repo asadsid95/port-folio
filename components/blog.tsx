@@ -10,7 +10,7 @@ export const Blog = ({ blogs }: any) => {
         <p className="text-4xl font-bold text-center hover:text-[#f2cd87] transition duration-300 mt-10">
           Blog
         </p>
-        <div className="flex items-center justify-between mx-10 ">
+        <div className="flex items-center justify-around mx-10">
           {blogs.slice(0, 3).map((blog: any) => (
             <Link
               href={`/blogs/${blog.slug}`}

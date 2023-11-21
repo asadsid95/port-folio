@@ -42,26 +42,28 @@ export default function AllBlogs() {
         {blogs
           .slice((currentPage - 1) * postsPerPage, currentPage * postsPerPage)
           .map((blog: any) => (
-            <Link
-              href={`/blogs/${blog.slug}`}
-              key={blog._id}
-              className="group p-3 gap-3 flex flex-col justify-center items-center text-center hover:bg-gray-300 rounded-md max-w-sm "
-            >
-              <div className="group-hover:scale-105 transition">
-                {blog.image && (
-                  <Image
-                    src={blog.image}
-                    alt={blog.name}
-                    width={200}
-                    height={250}
-                    className="object-cover rounded-md "
-                  />
-                )}
-              </div>
-              <div className="">
-                <div className="font-extrabold">{blog.name}</div>
-              </div>
-            </Link>
+            <div className="flex justify-center items-center">
+              <Link
+                href={`/blogs/${blog.slug}`}
+                key={blog._id}
+                className="group p-3 gap-3 flex flex-col justify-center items-center text-center hover:bg-gray-300 rounded-md max-w-sm "
+              >
+                <div className="group-hover:scale-105 transition">
+                  {blog.image && (
+                    <Image
+                      src={blog.image}
+                      alt={blog.name}
+                      width={200}
+                      height={250}
+                      className="object-cover rounded-md "
+                    />
+                  )}
+                </div>
+                <div className="">
+                  <div className="font-extrabold">{blog.name}</div>
+                </div>
+              </Link>
+            </div>
           ))}
       </div>
 
