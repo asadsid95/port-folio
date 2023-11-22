@@ -28,15 +28,15 @@ export const Blog = ({ blogs }: any) => {
                   />
                 )}
               </div>
-              <div className="">
-                <div className="text-xs font-semibold lg:text-xl lg:font-extrabold ">
+              <div>
+                <div className="text-xs font-normal lg:text-xl lg:font-extrabold ">
                   {blog.name}
                 </div>
               </div>
             </Link>
           ))}
         </div>
-        <div className="text-right mb-2 mr-2 ">
+        <div className="text-right mb-2 mr-2">
           <Link
             href={"/blogs"}
             className="hover:text-[#f2cd87] hover:underline transition duration-100 text-xs font-bold lg:font-bold lg:text-sm "

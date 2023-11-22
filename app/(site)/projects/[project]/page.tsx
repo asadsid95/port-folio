@@ -43,17 +43,6 @@ export default async function Project({ params }: Props) {
             </div>
           </div>
         )}
-        {project.role && project && (
-          <div className="  text-xs lg:text-sm">
-            <p className="underline font-bold">
-              Role
-              <br />
-            </p>
-            <div className="text-xs lg:text-sm">
-              <p>{project.role}</p>
-            </div>
-          </div>
-        )}
       </header>
 
       <div>
