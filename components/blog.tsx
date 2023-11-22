@@ -10,26 +10,26 @@ export const Blog = ({ blogs }: any) => {
         <p className=" font-bold text-center hover:text-[#f2cd87] transition duration-300 mt-10 text-lg md:text-xl lg:text-4xl">
           Blog
         </p>
-        <div className="flex items-center justify-around mx-10">
+        <div className="flex items-start justify-around mx-8 ">
           {blogs.slice(0, 3).map((blog: any) => (
             <Link
               href={`/blogs/${blog.slug}`}
               key={blog._id}
-              className="group p-3 gap-3 flex flex-col justify-between items-center text-center hover:bg-gray-300 rounded-md max-w-sm   "
+              className="group p-3 flex flex-col justify-between items-center text-center hover:bg-gray-300 rounded-md w-48 "
             >
-              <div className="group-hover:scale-105 transition">
+              <div className="group-hover:scale-105 transition w-full h-36 ">
                 {blog.image && (
                   <Image
                     src={blog.image}
                     alt={blog.name}
-                    width={200}
-                    height={250}
-                    className="object-cover rounded-md "
+                    width={100}
+                    height={150}
+                    className="rounded-md w-full h-full"
                   />
                 )}
               </div>
               <div>
-                <div className="text-xs font-normal lg:text-xl lg:font-extrabold ">
+                <div className="text-xs font-normal lg:text-lg lg:font-bold ">
                   {blog.name}
                 </div>
               </div>
