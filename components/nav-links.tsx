@@ -19,7 +19,7 @@ export const NavLink = ({ projects, blogs }: any) => {
     <div className="flex justify-between ">
       <div id="projects" className="w-full text-center font-bold ">
         <p
-          className=" sticky top-52 hover:text-[#f2cd87] transition duration-300 sm:text-md md:text-xl lg:text-4xl "
+          className=" sticky top-52 hover:text-[#f2cd87] transition duration-300 text-lg md:text-xl lg:text-4xl "
           onClick={() => scrollToSection(projectsRef)}
         >
           Projects
@@ -43,7 +43,7 @@ export const NavLink = ({ projects, blogs }: any) => {
                       alt={project.name}
                       width={200}
                       height={250}
-                      className="rounded-md shadow-lg sm:max-w-sm md:max-w-md lg:max-w-lg"
+                      className="rounded-md shadow-lg lg:max-w-lg"
                     />
                   ) : (
                     <Image
@@ -51,22 +51,24 @@ export const NavLink = ({ projects, blogs }: any) => {
                       alt={project.name}
                       width={200}
                       height={250}
-                      className="rounded-md shadow-lg sm:max-w-sm md:max-w-md lg:max-w-lg"
+                      className="rounded-md shadow-lg lg:max-w-lg"
                     />
                   )}
                 </div>
                 <div className="flex flex-col items-center w-[30vw]">
-                  <div className="sm:text-sm sm:font-bold lg:text-xl lg:font-extrabold ">
-                    <p>{project.name}</p>
+                  <div>
+                    <p className="text-xs font-bold lg:text-xl lg:font-extrabold ">
+                      {project.name}
+                    </p>
                     {/* <span className="lg:inline-block sm:hidden">
                       <br />
                       <PortableText value={project.listOfTechnologies} />
                     </span> */}
                   </div>
-                  <div className="sm:text-xs sm:font-normal lg:font-semibold text-xs max-w-sm text-center">
+                  <div className="mt-1 text-xs font-normal lg:text-md lg:font-semibold  text-center">
                     <PortableText value={project.content} />
                   </div>
-                  <div className="text-xs mt-3 text-center">
+                  <div className="text-xs mt-1 text-center">
                     <p className="underline ">Technologies</p>
                     <PortableText value={project.listOfTechnologies} />
                   </div>

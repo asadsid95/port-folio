@@ -7,7 +7,7 @@ export const Blog = ({ blogs }: any) => {
   return (
     <>
       <div className="flex flex-col gap-6">
-        <p className="text-4xl font-bold text-center hover:text-[#f2cd87] transition duration-300 mt-10">
+        <p className=" font-bold text-center hover:text-[#f2cd87] transition duration-300 mt-10 text-lg md:text-xl lg:text-4xl">
           Blog
         </p>
         <div className="flex items-center justify-around mx-10">
@@ -29,15 +29,17 @@ export const Blog = ({ blogs }: any) => {
                 )}
               </div>
               <div className="">
-                <div className="font-extrabold ">{blog.name}</div>
+                <div className="text-xs font-semibold lg:text-xl lg:font-extrabold ">
+                  {blog.name}
+                </div>
               </div>
             </Link>
           ))}
         </div>
-        <div className="text-right mr-24 mb-3 text-black font-bold">
+        <div className="text-right mb-2 mr-2 ">
           <Link
             href={"/blogs"}
-            className=" mr-4 hover:text-[#f2cd87] hover:underline transition duration-100 "
+            className="hover:text-[#f2cd87] hover:underline transition duration-100 text-xs font-bold lg:font-bold lg:text-sm "
           >
             See more blogs -&gt;
           </Link>
