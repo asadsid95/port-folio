@@ -28,7 +28,7 @@ export default function MoreContentArrow() {
         onMouseLeave={handleUnhover}
         onClick={handleClick}
       >
-        <span
+        <button
           className={
             isHovered
               ? "bg-gradient-to-b from-black to-yellow-400 bg-clip-text text-transparent"
@@ -36,7 +36,7 @@ export default function MoreContentArrow() {
           }
         >
           ▼
-        </span>
+        </button>
       </p>
     </div>
   );

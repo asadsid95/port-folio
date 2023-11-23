@@ -7,9 +7,12 @@ export const Blog = ({ blogs }: any) => {
   return (
     <>
       <div className="flex flex-col gap-6">
-        <p className=" font-bold text-center hover:text-[#f2cd87] transition duration-300 mt-10 text-lg md:text-xl lg:text-4xl">
+        <Link
+          href={"/blogs"}
+          className=" font-bold text-center hover:text-[#f2cd87] transition duration-300 mt-10 text-lg md:text-xl lg:text-4xl"
+        >
           Blog
-        </p>
+        </Link>
         <div className="flex items-start justify-around mx-8 ">
           {blogs.slice(0, 3).map((blog: any) => (
             <Link
@@ -24,7 +27,7 @@ export const Blog = ({ blogs }: any) => {
                     alt={blog.name}
                     width={100}
                     height={150}
-                    className="rounded-md w-full h-full"
+                    className="rounded-md w-full h-full object-contain"
                   />
                 )}
               </div>

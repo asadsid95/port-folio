@@ -30,10 +30,10 @@ function App() {
 
   return (
     <>
-      <div className="flex flex-col h-screen justify-evenly px-10">
-        <div className="flex flex-col  justify-center text-center ">
+      <div className="flex flex-col h-screen justify-evenly px-10 py-10 ">
+        <div className="flex flex-col  justify-center text-center  ">
           <a href="/" className="">
-            <h1 className="text-xl font-extrabold my-1 lg:text-5xl lg:my-5">
+            <h1 className="text-2xl font-extrabold my-1 lg:text-5xl lg:my-5">
               Asad Siddiqui
             </h1>
           </a>
@@ -50,7 +50,7 @@ function App() {
 
           <div className="mt-10 ">
             <a href={`${pages.resume}?dl=Resume.pdf`}>
-              <button className="bg-[#f2cd87] rounded-md shadow-md px-2 py-2 w-24 text-xs font-bold lg:text-lg lg:font-bold lg:w-48 lg:px-4 lg:py-2">
+              <button className="bg-[#f2cd87] hover:bg-[#f2cd87]/80 rounded-md shadow-md px-2 py-2 w-24 text-xs font-bold lg:text-lg lg:font-bold lg:w-48 lg:px-4 lg:py-2">
                 Download CV
               </button>
             </a>

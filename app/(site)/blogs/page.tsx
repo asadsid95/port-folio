@@ -34,9 +34,14 @@ export default function AllBlogs() {
 
   return (
     <>
-      <p className="text-4xl font-bold text-center mt-10 hover:text-[#f2cd87] transition duration-300 ">
-        Blog
-      </p>
+      <div className="flex items-center justify-center">
+        <Link
+          href={"/"}
+          className="text-4xl font-bold text-center mt-10 hover:text-[#f2cd87] transition duration-300 mx-auto"
+        >
+          Blog
+        </Link>
+      </div>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mx-5 mt-10">
         {blogs

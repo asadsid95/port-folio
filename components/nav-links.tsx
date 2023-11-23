@@ -16,8 +16,8 @@ export const NavLink = ({ projects, blogs }: any) => {
   };
 
   return (
-    <div className="flex justify-between px-1">
-      <div id="projects" className="w-full text-center font-bold ">
+    <div className="flex justify-between px-1 lg:px-32  ">
+      <div id="projects" className="w-full text-center font-bold  ">
         <p
           className=" sticky top-52 hover:text-[#f2cd87] transition duration-300 text-lg md:text-xl lg:text-4xl "
           onClick={() => scrollToSection(projectsRef)}
@@ -26,10 +26,10 @@ export const NavLink = ({ projects, blogs }: any) => {
         </p>
       </div>
 
-      <div className="w-full">
+      <div className="w-full pr-4">
         {/* Projects section */}
-        <section ref={projectsRef} className="scroll-mt-10 text-black ">
-          <div className="grid grid-cols-1  gap-4">
+        <section ref={projectsRef} className="scroll-mt-10 text-black  ">
+          <div className="grid grid-cols-1 gap-4">
             {projects.map((project: any) => (
               <Link
                 href={`/projects/${project.slug}`}
@@ -41,7 +41,7 @@ export const NavLink = ({ projects, blogs }: any) => {
                     <Image
                       src={project.image}
                       alt={project.name}
-                      width={200}
+                      width={350}
                       height={250}
                       className="rounded-md shadow-lg lg:max-w-lg"
                     />
@@ -49,7 +49,7 @@ export const NavLink = ({ projects, blogs }: any) => {
                     <Image
                       src="/default.jpg"
                       alt={project.name}
-                      width={200}
+                      width={350}
                       height={250}
                       className="rounded-md shadow-lg lg:max-w-lg"
                     />
@@ -57,21 +57,17 @@ export const NavLink = ({ projects, blogs }: any) => {
                 </div>
                 <div className="flex flex-col items-center w-[30vw]">
                   <div>
-                    <p className="text-xs font-bold lg:text-xl lg:font-extrabold ">
+                    <p className="text-xs font-bold lg:text-xl lg:font-extrabold text-center">
                       {project.name}
                     </p>
-                    {/* <span className="lg:inline-block sm:hidden">
-                      <br />
-                      <PortableText value={project.listOfTechnologies} />
-                    </span> */}
                   </div>
-                  <div className="mt-1 text-xs font-normal lg:text-md lg:font-semibold  text-center">
+                  <div className="mt-1 text-xs lg:text-md lg:font-semibold  text-center">
                     <PortableText value={project.content} />
                   </div>
-                  <div className="text-xs mt-1 text-center">
+                  {/* <div className="text-xs mt-1 text-center">
                     <p className="underline ">Technologies</p>
                     <PortableText value={project.listOfTechnologies} />
-                  </div>
+                  </div> */}
                 </div>
               </Link>
             ))}
