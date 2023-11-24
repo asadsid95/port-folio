@@ -27,17 +27,6 @@ export default async function Blog({ params }: Props) {
 
   const formattedDate = new Date(blog._createdAt).toLocaleDateString();
 
-  console.log("-------------------------------------------------");
-
-  // console.log(blog);
-
-  // console.log("-------------------------------------------------");
-
-  blog.content.forEach((block: any) => {
-    console.log(block);
-    console.log("//////////");
-  });
-
   return (
     <div className="flex flex-col w-full gap-5 h-full my-10 justify-between items-center  ">
       <header className=" text-center">
