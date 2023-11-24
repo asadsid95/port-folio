@@ -6,6 +6,20 @@ type Props = {
   params: { blog: string };
 };
 
+const myPortableTextComponents = {
+  block: {
+    h5: ({ children }) => <h1 className="text-xl mb-1">{children}</h1>,
+    normal: ({ children }) => <p className="mb-1">{children}</p>,
+  },
+  list: {
+    bullet: ({ children }) => (
+      <ul className="bg-gray-400 font-semibold text-xs list-disc pl-4 mb-5">
+        {children}
+      </ul>
+    ),
+  },
+};
+
 export default async function Blog({ params }: Props) {
   const slug = params.blog;
 
@@ -13,14 +27,20 @@ export default async function Blog({ params }: Props) {
 
   const formattedDate = new Date(blog._createdAt).toLocaleDateString();
 
+  console.log("-------------------------------------------------");
+
+  // console.log(blog);
+
+  // console.log("-------------------------------------------------");
+
+  blog.content.forEach((block) => {
+    console.log(block);
+    console.log("//////////");
+  });
+
   return (
     <div className="flex flex-col w-full gap-5 h-full my-10 justify-between items-center  ">
       <header className=" text-center">
-        <div>
-          <h1 className="text-md font-bold lg:text-3xl hover:text-[#f2cd87] transition duration-300">
-            {blog.name}
-          </h1>
-        </div>
         <div className="text-gray-400 text-xs lg:text-sm py-2">
           <p>Written by Asad </p>
           <p>Created at: {formattedDate}</p>
@@ -35,11 +55,19 @@ export default async function Blog({ params }: Props) {
           className="rounded-md max-w-md"
         />
       </div>
+      <div>
+        <h1 className="text-md font-bold lg:text-3xl hover:text-[#f2cd87] transition duration-300">
+          {blog.name}
+        </h1>
+      </div>
 
       {blog.content ? (
         <div className=" text-xs mx-4 lg:text-base lg:mx-8">
-          <div>
-            <PortableText value={blog.content} />
+          <div className="p-6  flex flex-col ">
+            <PortableText
+              value={blog.content}
+              components={myPortableTextComponents}
+            />
           </div>
         </div>
       ) : (
