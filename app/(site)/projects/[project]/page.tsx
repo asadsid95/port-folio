@@ -6,6 +6,20 @@ type Props = {
   params: { project: string };
 };
 
+const myPortableTextComponents = {
+  block: {
+    h5: ({ children }: any) => <h1 className="text-xl mb-1">{children}</h1>,
+    normal: ({ children }: any) => <p className="mb-1">{children}</p>,
+  },
+  list: {
+    bullet: ({ children }: any) => (
+      <ul className="bg-gray-400 font-semibold text-xs list-disc pl-4 mb-5">
+        {children}
+      </ul>
+    ),
+  },
+};
+
 export default async function Project({ params }: Props) {
   const slug = params.project;
 
@@ -28,7 +42,10 @@ export default async function Project({ params }: Props) {
         {project.content && (
           <div className="text-gray-400 text-xs lg:text-sm py-2">
             <div>
-              <PortableText value={project.content} />
+              <PortableText
+                value={project.content}
+                components={myPortableTextComponents}
+              />
             </div>
           </div>
         )}

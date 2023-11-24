@@ -62,7 +62,7 @@ export const NavLink = ({ projects, blogs }: any) => {
                     </p>
                   </div>
                   <div className="mt-1 text-xs lg:text-md lg:font-semibold  text-center">
-                    <PortableText value={project.content} />
+                    <PortableText value={project.description} />
                   </div>
                   {/* <div className="text-xs mt-1 text-center">
                     <p className="underline ">Technologies</p>
