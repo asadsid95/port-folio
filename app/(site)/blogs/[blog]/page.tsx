@@ -8,11 +8,11 @@ type Props = {
 
 const myPortableTextComponents = {
   block: {
-    h5: ({ children }) => <h1 className="text-xl mb-1">{children}</h1>,
-    normal: ({ children }) => <p className="mb-1">{children}</p>,
+    h5: ({ children }: any) => <h1 className="text-xl mb-1">{children}</h1>,
+    normal: ({ children }: any) => <p className="mb-1">{children}</p>,
   },
   list: {
-    bullet: ({ children }) => (
+    bullet: ({ children }: any) => (
       <ul className="bg-gray-400 font-semibold text-xs list-disc pl-4 mb-5">
         {children}
       </ul>
@@ -33,7 +33,7 @@ export default async function Blog({ params }: Props) {
 
   // console.log("-------------------------------------------------");
 
-  blog.content.forEach((block) => {
+  blog.content.forEach((block: any) => {
     console.log(block);
     console.log("//////////");
   });
