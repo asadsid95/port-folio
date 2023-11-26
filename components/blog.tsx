@@ -39,7 +39,7 @@ export const Blog = ({ blogs }: any) => {
             </Link>
           ))}
         </div>
-        <div className="text-right mb-4 mr-10 lg:mr-32">
+        <div className="text-right mb-4 mr-10 lg:mr-32 text-black/60">
           <Link
             href={"/blogs"}
             className="hover:text-[#f2cd87] hover:underline transition duration-100 text-xs font-bold lg:font-bold lg:text-sm "
