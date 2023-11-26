@@ -76,8 +76,23 @@ function App() {
       <NavLink projects={projects} blogs={blogs} />
       <Blog blogs={blogs} />
 
-      <div className="border-2 border-red-700">
-        <div></div>
+      <div className="py-10 bg-yellow-100/30">
+        <footer>
+          <div className="flex flex-wrap gap-12 justify-evenly text-xs mx-4 ">
+            <p>&copy; 2023 Your Company. All rights reserved.</p>
+            <ul>
+              {/* <li>
+                <a href="#">Privacy Policy</a>
+              </li>
+              <li>
+                <a href="#">Terms of Service</a>
+              </li> */}
+              <li>
+                <a href="#">Contact Us</a>
+              </li>
+            </ul>
+          </div>
+        </footer>
       </div>
     </>
   );
