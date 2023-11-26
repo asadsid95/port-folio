@@ -75,6 +75,10 @@ function App() {
       </div>
       <NavLink projects={projects} blogs={blogs} />
       <Blog blogs={blogs} />
+
+      <div className="border-2 border-red-700">
+        <div></div>
+      </div>
     </>
   );
 }

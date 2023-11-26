@@ -18,6 +18,15 @@ const myPortableTextComponents = {
       </ul>
     ),
   },
+  marks: {
+    // Define rendering logic for different mark types
+    // For now, handling only the 'span' mark type
+    span: ({ children, mark }: any) => (
+      <span className={`text-${mark.text.toLowerCase()} bg-blue-600`}>
+        {children}
+      </span>
+    ),
+  },
 };
 
 export default async function Blog({ params }: Props) {
@@ -26,6 +35,10 @@ export default async function Blog({ params }: Props) {
   const blog = await getBlog(slug);
 
   const formattedDate = new Date(blog._createdAt).toLocaleDateString();
+
+  // blog.content.forEach((block :any) => {
+  //   console.log(block);
+  // });
 
   return (
     <div className="flex flex-col w-full gap-5 h-full my-10 justify-between items-center  ">
