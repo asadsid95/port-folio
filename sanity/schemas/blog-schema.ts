@@ -18,7 +18,10 @@ const blog = {
       name: "content",
       title: "Content of the blog post",
       type: "array",
-      of: [{ type: "block" }],
+      of: [
+        { type: "block" },
+        { type: "image", title: "In blog Image", name: "inblogimage" },
+      ],
     },
     {
       name: "image",

@@ -1,6 +1,11 @@
 import { getBlog } from "@/sanity/sanity-utils";
 import { PortableText } from "@portabletext/react";
+import imageUrlBuilder from "@sanity/image-url";
+import clientConfig from "../../../../sanity/config/client-config";
+
 import Image from "next/image";
+
+const builder = imageUrlBuilder(clientConfig);
 
 type Props = {
   params: { blog: string };
@@ -27,6 +32,12 @@ const myPortableTextComponents = {
       </span>
     ),
   },
+  // inblogimage: ({ value, isInline }: any) => {
+  //   console.log(value);
+  //   return (
+  //     <img className="bg-black" src={builder.image(value.asset._ref).url()} />
+  //   );
+  // },
 };
 
 export default async function Blog({ params }: Props) {
@@ -36,9 +47,11 @@ export default async function Blog({ params }: Props) {
 
   const formattedDate = new Date(blog._createdAt).toLocaleDateString();
 
-  // blog.content.forEach((block :any) => {
-  //   console.log(block);
-  // });
+  console.log(blog);
+
+  blog.content.forEach((block: any) => {
+    console.log(block.asset);
+  });
 
   return (
     <div className="flex flex-col w-full gap-5 h-full my-10 justify-between items-center  ">

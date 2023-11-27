@@ -79,7 +79,7 @@ export async function getBlogs() {
       name,
       content, 
       "image": image.asset->url,
-      "slug": slug.current
+      "slug": slug.current,
     }`
   );
 }
@@ -90,7 +90,7 @@ export async function getBlog(slug: any) {
       _id,
       _createdAt,
       name,
-      content, 
+      content,
       "image": image.asset->url,
       "slug": slug.current
     }`,
