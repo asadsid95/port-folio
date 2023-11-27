@@ -18,7 +18,7 @@ const myPortableTextComponents = {
   },
   list: {
     bullet: ({ children }: any) => (
-      <ul className="bg-gray-400 font-semibold text-xs list-disc pl-4 mb-5">
+      <ul className="bg-gray-200 font-semibold text-xs list-disc pl-4 mb-5">
         {children}
       </ul>
     ),
@@ -54,7 +54,7 @@ export default async function Blog({ params }: Props) {
   });
 
   return (
-    <div className="flex flex-col w-full gap-5 h-full my-10 justify-between items-center  ">
+    <div className="flex flex-col w-full gap-5 h-full my-10 justify-between items-center mx-4 ">
       <header className=" text-center">
         <div className="text-gray-400 text-xs lg:text-sm py-2">
           <p>Written by Asad </p>
@@ -77,8 +77,8 @@ export default async function Blog({ params }: Props) {
       </div>
 
       {blog.content ? (
-        <div className=" text-xs mx-4 lg:text-base lg:mx-8">
-          <div className="p-6  flex flex-col ">
+        <div className=" text-xs  lg:text-base lg:mx-8">
+          <div className="p-6  flex flex-col bg-gray-200/50 ">
             <PortableText
               value={blog.content}
               components={myPortableTextComponents}
