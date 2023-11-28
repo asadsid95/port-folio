@@ -13,7 +13,9 @@ type Props = {
 
 const myPortableTextComponents = {
   block: {
-    h5: ({ children }: any) => <h1 className="text-xl mb-1">{children}</h1>,
+    h5: ({ children }: any) => (
+      <h1 className="text-xl mb-1 font-semibold">{children}</h1>
+    ),
     normal: ({ children }: any) => <p className="mb-1">{children}</p>,
   },
   list: {
@@ -47,11 +49,11 @@ export default async function Blog({ params }: Props) {
 
   const formattedDate = new Date(blog._createdAt).toLocaleDateString();
 
-  console.log(blog);
+  // console.log(blog);
 
-  blog.content.forEach((block: any) => {
-    console.log(block.asset);
-  });
+  // blog.content.forEach((block: any) => {
+  //   console.log(block.asset);
+  // });
 
   return (
     <div className="flex flex-col w-full gap-5 h-full my-10 justify-between items-center mx-4 ">
