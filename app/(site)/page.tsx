@@ -7,6 +7,7 @@ import { Blog } from "@/components/blog";
 import MoreContentArrow from "@/components/morecontentArrow";
 import Link from "next/link";
 import Image from "next/image";
+import Contact from "@/components/contact";
 
 //@ts-ignore
 function App() {
@@ -75,8 +76,7 @@ function App() {
       </div>
       <NavLink projects={projects} blogs={blogs} />
       <Blog blogs={blogs} />
-
-
+      <Contact />
     </>
   );
 }

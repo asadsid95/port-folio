@@ -3,6 +3,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Link from "next/link";
 import { getPages } from "@/sanity/sanity-utils";
+import Footer from "@/components/footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,26 +22,7 @@ export default async function RootLayout({
     <html lang="en">
       <body className={`${inter.className}`}>
         <main>{children}</main>
-        <div className="py-10 bg-[#f2cd87]/30 font-semibold">
-          <footer>
-            <div className="flex flex-wrap gap-12 justify-evenly text-xs bottom-0 ">
-              <p>&copy; 2023 Asad Siddiqui. All rights reserved.</p>
-              <ul>
-                {/* <li>
-                <a href="#">Privacy Policy</a>
-              </li>
-              <li>
-                <a href="#">Terms of Service</a>
-              </li> */}
-                <li className="hover:underline text-black/60 ">
-                  <a href="mailto:asads@hey.com?subject=Inquiry&body=Hello Asad, we should connect!">
-                    Let's get in touch
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </footer>
-        </div>
+        <Footer />
       </body>
     </html>
   );
