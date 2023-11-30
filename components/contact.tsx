@@ -18,9 +18,6 @@ export default function Contact() {
   async function handleSubmit(e: any) {
     e.preventDefault();
 
-    const submittedForm = new FormData(e.target);
-    const refinedData = Object.fromEntries(submittedForm.entries());
-
     const res = await fetch("/api", {
       body: JSON.stringify(emailInfo),
       headers: {
@@ -29,9 +26,11 @@ export default function Contact() {
       method: "POST",
     });
 
+    setEmailInfo({ name: "", email: "", message: "" });
+
     const result = await res.json();
 
-    console.log(result);
+    console.log("result:             ", result);
   }
 
   return (
@@ -59,15 +58,17 @@ export default function Contact() {
             className="bg-gray-200 rounded-sm"
             value={emailInfo.email}
             onChange={handleChange}
+            type="email"
           />
         </div>
         <div className="flex gap-3 ">
           <label>Message</label>
-          <input
+          <textarea
             name="message"
             className="bg-gray-200 rounded-sm"
             value={emailInfo.message}
             onChange={handleChange}
+            maxLength={240}
           />
         </div>
         <button className="bg-blue-400 rounded-sm p-1">Submit</button>

@@ -1,31 +1,28 @@
 import sendgrid from "@sendgrid/mail";
 
-console.log(sendgrid.setApiKey(process.env.SENDGRID_API_KEY));
+const API_KEY: string = process.env.SENDGRID_API_KEY || "";
+
+sendgrid.setApiKey(API_KEY);
 
 export async function POST(req: any) {
-  const res = await req.json();
-  const { name, email, message } = res;
+  const req_info = await req.json();
+  const { name, email, message } = req_info;
 
-  console.log(name);
+  //  user data validation
+  //   if (name! || name.length < 4) {
+  //     return Response.error();
+  //   }
 
+  // send data to sendGrid for email
   //@ts-ignore
-  sendgrid
-    .send({
-      to: "asads@hey.com",
-      from: `${email}`,
-      subject: `From ${name}; ${message}`,
-      text: "hellooooo",
-    })
-    .then(() => {
-      console.log("email sent");
-      //   res.json({ message: "it worked!" });
-    })
-    .catch((err) => {
-      console.error("ERROR: ", err);
-      //   res.json({ message: "it DID NOT worked!" });
-    });
+  const sendEmail = await sendgrid.send({
+    to: "asads@hey.com",
+    from: `${email}`,
+    subject: `From ${name}; ${message}`,
+    text: "hellooooo",
+  });
 
-  //   console.log(emailsent);
+  //   const response = sendEmail;
 
   return Response.json({ message: "it passed!" });
 }
