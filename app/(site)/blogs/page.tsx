@@ -33,7 +33,7 @@ export default function AllBlogs() {
   );
 
   return (
-    <>
+    <div className="">
       <div className="flex items-center justify-center">
         <Link
           href={"/"}
@@ -43,7 +43,7 @@ export default function AllBlogs() {
         </Link>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mx-5 mt-10">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mx-5 my-11 ">
         {blogs
           .slice((currentPage - 1) * postsPerPage, currentPage * postsPerPage)
           .map((blog: any) => (
@@ -93,6 +93,6 @@ export default function AllBlogs() {
           Next
         </button>
       </div> */}
-    </>
+    </div>
   );
 }
