@@ -36,7 +36,7 @@ export const NavLink = ({ projects, blogs }: any) => {
                 key={project._id}
                 className="group p-3 gap-3 flex flex-col justify-between items-center transition rounded-md hover:bg-gray-300 "
               >
-                <div className="flex items-center group-hover:scale-110 duration-100 ">
+                <div className="flex items-center group-hover:scale-105 hover:brightness-90 duration-100 ">
                   {project.image ? (
                     <Image
                       src={project.image}

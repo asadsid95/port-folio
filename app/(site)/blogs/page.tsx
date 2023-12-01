@@ -51,9 +51,9 @@ export default function AllBlogs() {
               <Link
                 href={`/blogs/${blog.slug}`}
                 key={blog._id}
-                className="group p-3 gap-3 flex flex-col justify-center items-center text-center hover:bg-gray-300 rounded-md max-w-sm "
+                className="group p-3  gap-3 flex flex-col justify-center items-center text-center hover:bg-gray-300 rounded-md max-w-sm h-full"
               >
-                <div className="group-hover:scale-105 transition">
+                <div className="group-hover:scale-105 hover:brightness-90 transition">
                   {blog.image && (
                     <Image
                       src={blog.image}

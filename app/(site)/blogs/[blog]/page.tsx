@@ -4,6 +4,7 @@ import imageUrlBuilder from "@sanity/image-url";
 import clientConfig from "../../../../sanity/config/client-config";
 
 import Image from "next/image";
+import Link from "next/link";
 
 const builder = imageUrlBuilder(clientConfig);
 
@@ -73,9 +74,11 @@ export default async function Blog({ params }: Props) {
         />
       </div>
       <div>
-        <h1 className="text-md font-bold lg:text-3xl hover:text-[#f2cd87] transition duration-300">
-          {blog.name}
-        </h1>
+        <Link href="/">
+          <h1 className="text-md font-bold lg:text-3xl hover:text-[#f2cd87] transition duration-300 text-center">
+            {blog.name}
+          </h1>
+        </Link>
       </div>
 
       {blog.content ? (

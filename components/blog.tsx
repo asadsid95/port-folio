@@ -20,7 +20,7 @@ export const Blog = ({ blogs }: any) => {
               key={blog._id}
               className="group p-3 flex flex-col justify-between items-center text-center hover:bg-gray-300 rounded-md w-48 "
             >
-              <div className="group-hover:scale-105 transition w-full h-12 lg:h-36 ">
+              <div className="group-hover:scale-105 hover:brightness-90 transition w-full h-12 lg:h-36 ">
                 {blog.image && (
                   <Image
                     src={blog.image}
