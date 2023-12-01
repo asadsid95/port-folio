@@ -26,7 +26,7 @@ export default async function Project({ params }: Props) {
   const project = await getProject(slug);
 
   return (
-    <div className=" flex flex-col w-full gap-5 h-full my-10 justify-between items-center  ">
+    <div className=" flex flex-col w-full h-full my-10 justify-between items-center  ">
       <header className="text-center">
         <a
           href={project.url}
@@ -34,53 +34,53 @@ export default async function Project({ params }: Props) {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <h1 className="text-md lg:text-3xl font-bold text-center  hover:text-[#f2cd87] transition duration-300 ">
+          <h1 className="text-md lg:text-3xl font-bold hover:text-[#f2cd87] transition duration-300 ">
             {project.name}
           </h1>
         </a>
-
-        {project.content && (
-          <div className="text-gray-400 text-xs lg:text-sm py-2">
-            <div>
-              <PortableText
-                value={project.content}
-                components={myPortableTextComponents}
-              />
-            </div>
-          </div>
-        )}
-        {project.listOfTechnologies && (
-          <div className=" text-xs lg:text-sm py-2">
-            <p className="underline font-bold">
-              Technologies
-              <br />
-            </p>
-            <div>
-              <PortableText value={project.listOfTechnologies} />
-            </div>
-          </div>
-        )}
+        <div className="my-4">
+          {project.image ? (
+            <Image
+              src={project.image}
+              alt={project.name}
+              width={520}
+              height={380}
+              className="rounded-md max-w-md"
+            />
+          ) : (
+            <Image
+              src="/default.jpg"
+              alt={project.name}
+              width={520}
+              height={380}
+              className="rounded-md max-w-md"
+            />
+          )}
+        </div>
       </header>
-
-      <div>
-        {project.image ? (
-          <Image
-            src={project.image}
-            alt={project.name}
-            width={320}
-            height={280}
-            className="rounded-md max-w-md"
-          />
-        ) : (
-          <Image
-            src="/default.jpg"
-            alt={project.name}
-            width={200}
-            height={250}
-            className="rounded-md max-w-md"
-          />
-        )}
-      </div>
+      {project.content ? (
+        <div className="text-xs lg:text-sm lg:mx-8">
+          <div className="p-6  flex flex-col bg-gray-200/50 ">
+            <PortableText
+              value={project.content}
+              components={myPortableTextComponents}
+            />
+          </div>
+        </div>
+      ) : (
+        <p>More coming soon!</p>
+      )}
+      {project.listOfTechnologies && (
+        <div className=" text-xs lg:text-sm py-2">
+          <p className="underline font-bold">
+            Technologies
+            <br />
+          </p>
+          <div>
+            <PortableText value={project.listOfTechnologies} />
+          </div>
+        </div>
+      )}
 
       <div className="text-xs mx-4 lg:text-base lgmx-8">
         <p className="underline font-bold">
