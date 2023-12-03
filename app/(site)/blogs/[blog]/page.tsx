@@ -26,21 +26,21 @@ const myPortableTextComponents = {
       </ul>
     ),
   },
-  marks: {
-    // Define rendering logic for different mark types
-    // For now, handling only the 'span' mark type
-    span: ({ children, mark }: any) => (
-      <span className={`text-${mark.text.toLowerCase()} bg-blue-600`}>
-        {children}
-      </span>
-    ),
-  },
-  // inblogimage: ({ value, isInline }: any) => {
-  //   console.log(value);
-  //   return (
-  //     <img className="bg-black" src={builder.image(value.asset._ref).url()} />
-  //   );
+  // marks: {
+  //   // Define rendering logic for different mark types
+  //   // For now, handling only the 'span' mark type
+  //   span: ({ children, mark }: any) => (
+  //     <span className={`text-${mark.text.toLowerCase()} bg-blue-600`}>
+  //       {children}
+  //     </span>
+  //   ),
   // },
+  inblogimage: ({ value, isInline }: any) => {
+    console.log(value);
+    return (
+      <img className="bg-black" src={builder.image(value.asset._ref).url()} />
+    );
+  },
 };
 
 export default async function Blog({ params }: Props) {
