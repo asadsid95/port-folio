@@ -13,26 +13,26 @@ export const Blog = ({ blogs }: any) => {
         >
           Blog
         </Link>
-        <div className="flex items-start justify-around mx-8 ">
+        <div className="flex items-start justify-around mx-5 ">
           {blogs.slice(0, 3).map((blog: any) => (
             <Link
               href={`/blogs/${blog.slug}`}
               key={blog._id}
-              className="group p-3 flex flex-col justify-between items-center text-center hover:bg-gray-300 rounded-md w-48 "
+              className="group p-1 flex flex-col justify-between items-center text-center hover:bg-gray-300 rounded-md w-56 "
             >
-              <div className="group-hover:scale-105 hover:brightness-90 transition w-full h-12 lg:h-36 ">
+              <div className="group-hover:scale-105 hover:brightness-90 transition w-full h-28 lg:h-36 ">
                 {blog.image && (
                   <Image
                     src={blog.image}
                     alt={blog.name}
-                    width={100}
-                    height={150}
+                    width={200}
+                    height={250}
                     className="rounded-md w-full h-full object-contain"
                   />
                 )}
               </div>
               <div>
-                <div className="text-xs font-normal lg:text-lg lg:font-bold ">
+                <div className=" mt-2 text-xs font-semibold lg:text-lg lg:font-bold ">
                   {blog.name}
                 </div>
               </div>

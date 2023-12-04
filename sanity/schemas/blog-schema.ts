@@ -2,11 +2,16 @@ const blog = {
   name: "blog",
   type: "document",
   title: "Blog",
+  options: {
+    hotspot: true,
+  },
   fields: [
     {
       name: "name",
       type: "string",
       title: "Title of the Blog",
+      validation: (Rule: any) =>
+        Rule.max(20).warning("Shorter titles are usually better"),
     },
     {
       name: "slug",
@@ -20,7 +25,14 @@ const blog = {
       type: "array",
       of: [
         { type: "block" },
-        { type: "image", title: "In blog Image", name: "inblogimage" },
+        {
+          type: "image",
+          title: "In blog Image",
+          name: "inblogimage",
+          options: {
+            hotspot: true,
+          },
+        },
       ],
     },
     {

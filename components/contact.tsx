@@ -35,18 +35,18 @@ export default function Contact() {
 
   return (
     <div className="flex gap-5 justify-center items-start my-4">
-      <div className="text-sm lg:text-xl font-bold">
+      <div className="text-sm lg:text-xl font-bold text-center">
         <p>Contact me!</p>
       </div>
       <form
-        className=" flex flex-col justify-between items-end gap-4 "
+        className=" flex flex-col justify-between items-end gap-4 text-xs"
         onSubmit={handleSubmit}
       >
         <div className="flex gap-3 ">
           <label>Name</label>
           <input
             name="name"
-            className="bg-gray-200 rounded-sm"
+            className="bg-gray-200 rounded-sm "
             value={emailInfo.name}
             onChange={handleChange}
           />

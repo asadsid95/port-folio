@@ -26,20 +26,14 @@ const myPortableTextComponents = {
       </ul>
     ),
   },
-  // marks: {
-  //   // Define rendering logic for different mark types
-  //   // For now, handling only the 'span' mark type
-  //   span: ({ children, mark }: any) => (
-  //     <span className={`text-${mark.text.toLowerCase()} bg-blue-600`}>
-  //       {children}
-  //     </span>
-  //   ),
-  // },
-  inblogimage: ({ value, isInline }: any) => {
-    console.log(value);
-    return (
-      <img className="bg-black" src={builder.image(value.asset._ref).url()} />
-    );
+
+  types: {
+    inblogimage: ({ value, isInline }: any) => {
+      console.log(value);
+      return (
+        <img className="bg-black" src={builder.image(value.asset._ref).url()} />
+      );
+    },
   },
 };
 
@@ -49,12 +43,6 @@ export default async function Blog({ params }: Props) {
   const blog = await getBlog(slug);
 
   const formattedDate = new Date(blog._createdAt).toLocaleDateString();
-
-  // console.log(blog);
-
-  // blog.content.forEach((block: any) => {
-  //   console.log(block.asset);
-  // });
 
   return (
     <div className="flex flex-col w-full gap-5 h-full my-10 justify-between items-center mx-4 ">
