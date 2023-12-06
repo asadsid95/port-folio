@@ -18,18 +18,16 @@ const myPortableTextComponents = {
       <h1 className="text-xl mb-1 font-semibold">{children}</h1>
     ),
     normal: ({ children }: any) => <p className="mb-1">{children}</p>,
+    link: ({ children }: any) => <a href={children.href}></a>,
   },
   list: {
     bullet: ({ children }: any) => (
-      <ul className="bg-gray-200 font-semibold text-xs list-disc pl-4 mb-5">
-        {children}
-      </ul>
+      <ul className="text-xs list-disc pl-4 mb-3">{children}</ul>
     ),
   },
 
   types: {
     inblogimage: ({ value, isInline }: any) => {
-      console.log(value);
       return (
         <img className="bg-black" src={builder.image(value.asset._ref).url()} />
       );
@@ -45,9 +43,9 @@ export default async function Blog({ params }: Props) {
   const formattedDate = new Date(blog._createdAt).toLocaleDateString();
 
   return (
-    <div className="flex flex-col w-full gap-5 h-full my-10 justify-between items-center mx-4 ">
+    <div className="flex flex-col w-full gap-5 h-full justify-between items-center my-10 px-4">
       <header className=" text-center">
-        <div className="text-gray-400 text-xs lg:text-sm py-2">
+        <div className="text-gray-400 text-xs lg:text-sm ">
           <p>Written by Asad </p>
           <p>Created at: {formattedDate}</p>
         </div>
@@ -56,22 +54,22 @@ export default async function Blog({ params }: Props) {
         <Image
           src={blog.image}
           alt={blog.name}
-          width={320}
-          height={280}
+          width={220}
+          height={180}
           className="rounded-md max-w-md"
         />
       </div>
-      <div>
+      <div className="">
         <Link href="/">
-          <h1 className="text-md font-bold lg:text-3xl hover:text-[#f2cd87] transition duration-300 text-center">
+          <h1 className="text-sm font-bold lg:text-2xl hover:text-[#f2cd87] transition duration-300 text-center  ">
             {blog.name}
           </h1>
         </Link>
       </div>
 
       {blog.content ? (
-        <div className=" text-xs  lg:text-base lg:mx-8">
-          <div className="p-6  flex flex-col bg-gray-200/50 ">
+        <div className=" text-xs lg:text-sm lg:mx-8 lg:w-[50vw]">
+          <div className="">
             <PortableText
               value={blog.content}
               components={myPortableTextComponents}

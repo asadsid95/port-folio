@@ -39,8 +39,8 @@ function App() {
             </h1>
           </a>
           <p className="mt-2 lg:mt-4 text-xs lg:text-lg font-medium ">
-            <span className="bg-[#f2cd87]">Status:</span> Looking for the next
-            thing
+            <em className="bg-[#f2cd87] not-italic">Status:</em> Looking for the
+            next thing
           </p>
 
           <hr className=" w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded lg:w-72 lg:my-6 dark:bg-gray-700" />

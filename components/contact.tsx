@@ -34,9 +34,9 @@ export default function Contact() {
   }
 
   return (
-    <div className="flex gap-5 justify-center items-start my-4">
+    <div className="flex gap-5 justify-center items-start m-4  ">
       <div className="text-sm lg:text-xl font-bold text-center">
-        <p>Contact me!</p>
+        <p>Let's connect</p>
       </div>
       <form
         className=" flex flex-col justify-between items-end gap-4 text-xs"
