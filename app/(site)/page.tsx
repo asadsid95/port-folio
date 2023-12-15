@@ -39,14 +39,14 @@ function App() {
             </h1>
           </a>
           <p className="mt-2 lg:mt-4 text-xs lg:text-lg font-medium ">
-            <em className="bg-[#f2cd87] not-italic">Status:</em> Looking for the
-            next thing
+            <em className="bg-[#f2cd87] not-italic">Status:</em> Seeking the
+            next production-ready product to build
           </p>
 
           <hr className=" w-48 h-1 mx-auto my-4 bg-gray-100 border-0 rounded lg:w-72 lg:my-6 dark:bg-gray-700" />
           <p className=" text-xs  lg:text-lg lg:mt-4 font-normal ">
-            I want to continue building software, tinker in the cloud, and
-            visualize data flow
+            I'm building software, tinkering in the cloud, and visualizing data
+            flow
           </p>
 
           <div className="mt-10 ">

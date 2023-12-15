@@ -1,78 +1,26 @@
 import { useState } from "react";
+import { InlineWidget } from "react-calendly";
 
 export default function Contact() {
-  const [emailInfo, setEmailInfo] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
-  function handleChange(e: any) {
-    const { name, value } = e.target;
-    setEmailInfo((prevData) => ({
-      ...prevData,
-      [name]: value,
-    }));
-  }
-
-  async function handleSubmit(e: any) {
-    e.preventDefault();
-
-    const res = await fetch("/api", {
-      body: JSON.stringify(emailInfo),
-      headers: {
-        "Content-Type": "application/json",
-      },
-      method: "POST",
-    });
-
-    setEmailInfo({ name: "", email: "", message: "" });
-
-    const result = await res.json();
-
-    console.log("result:             ", result);
-  }
-
   return (
-    <div className="flex gap-5 justify-center items-start m-4  ">
-      <div className="text-sm lg:text-xl font-bold text-center">
-        <p>Let's connect</p>
+    <>
+      <div className="flex flex-col lg:flex-row  gap-5 justify-center lg:items-center m-4 ">
+        <div className="text-lg lg:text-xl font-bold text-center">
+          <p>Let's connect</p>
+        </div>
+
+        <div>
+          <InlineWidget
+            url="https://calendly.com/asadsid95/15min?hide_event_type_details=1&hide_gdpr_banner=1"
+            styles={{ height: "600px" }}
+          />
+          <script
+            type="text/javascript"
+            src="https://assets.calendly.com/assets/external/widget.js"
+            async
+          ></script>
+        </div>
       </div>
-      <form
-        className=" flex flex-col justify-between items-end gap-4 text-xs"
-        onSubmit={handleSubmit}
-      >
-        <div className="flex gap-3 ">
-          <label>Name</label>
-          <input
-            name="name"
-            className="bg-gray-200 rounded-sm "
-            value={emailInfo.name}
-            onChange={handleChange}
-          />
-        </div>
-        <div className="flex gap-3 ">
-          <label>Email</label>
-          <input
-            name="email"
-            className="bg-gray-200 rounded-sm"
-            value={emailInfo.email}
-            onChange={handleChange}
-            type="email"
-          />
-        </div>
-        <div className="flex gap-3 ">
-          <label>Message</label>
-          <textarea
-            name="message"
-            className="bg-gray-200 rounded-sm"
-            value={emailInfo.message}
-            onChange={handleChange}
-            maxLength={240}
-          />
-        </div>
-        <button className="bg-blue-400 rounded-sm p-1">Submit</button>
-      </form>
-    </div>
+    </>
   );
 }

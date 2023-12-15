@@ -13,7 +13,7 @@ export const Blog = ({ blogs }: any) => {
         >
           Blog
         </Link>
-        <div className="flex items-start justify-around mx-5 ">
+        <div className="flex flex-col gap-y-5 lg:flex-row items-center lg:items-start justify-around mx-5 ">
           {blogs.slice(0, 3).map((blog: any) => (
             <Link
               href={`/blogs/${blog.slug}`}

@@ -23,7 +23,7 @@ export default function MoreContentArrow() {
   return (
     <div className="flex justify-center">
       <p
-        className="{text-center text-xl text-[#f2cd87] cursor-pointer}"
+        className="text-center text-xl text-[#f2cd87] cursor-pointer "
         onMouseEnter={handleHover}
         onMouseLeave={handleUnhover}
         onClick={handleClick}
@@ -31,7 +31,7 @@ export default function MoreContentArrow() {
         <button
           className={
             isHovered
-              ? "bg-gradient-to-b from-black to-yellow-400 bg-clip-text text-transparent"
+              ? "bg-gradient-to-b from-gray-600 to-yellow-400 bg-clip-text text-transparent"
               : ""
           }
         >
