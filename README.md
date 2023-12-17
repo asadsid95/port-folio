@@ -1,6 +1,6 @@
 # Asad's Portfolio
 
-Check here for [deployed site] (https://port-folio-asadsid95.vercel.app/)
+Check here for [deployed site](https://port-folio-asadsid95.vercel.app/)
 
 ---
 
