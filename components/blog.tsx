@@ -2,8 +2,36 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useMemo, useState } from "react";
 
 export const Blog = ({ blogs }: any) => {
+  const [isLargeScreen, setIsLargeScreen] = useState(false);
+
+  useEffect(() => {
+    // Check window dimensions after the component has mounted
+    setIsLargeScreen(window.innerWidth >= 1024);
+
+    // Add event listener to update dimensions on window resize
+    const handleResize = () => {
+      setIsLargeScreen(window.innerWidth >= 1024);
+    };
+
+    // Attach the event listener
+    window.addEventListener("resize", handleResize);
+
+    // Remove the event listener when the component is unmounted
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
+  //////////////////////////////////////////////////////
+  // const isLargeScreen = window.innerWidth >= 1024;
+
+  // const visibleBlogs = useMemo(() => {
+  //   const maxVisibleBlogs = isLargeScreen ? 6 : 3;
+  //   return blogs.slice(0, maxVisibleBlogs);
+  // }, [blogs, isLargeScreen]);
+
   return (
     <>
       <div className="flex flex-col gap-6">
@@ -13,12 +41,13 @@ export const Blog = ({ blogs }: any) => {
         >
           Blog
         </Link>
-        <div className="flex flex-col gap-y-5 lg:flex-row items-center lg:items-start justify-around mx-5 ">
-          {blogs.slice(0, 3).map((blog: any) => (
+        {/* <div className="flex flex-col gap-y-5 lg:flex-row items-center lg:items-start justify-around mx-5 "> */}
+        <div className="grid lg:grid-cols-3 gap-5 justify-around mx-auto">
+          {blogs.slice(0, isLargeScreen ? 6 : 3).map((blog: any) => (
             <Link
               href={`/blogs/${blog.slug}`}
               key={blog._id}
-              className="group p-1 flex flex-col justify-between items-center text-center hover:bg-gray-300 rounded-md w-56 "
+              className="group p-1 flex flex-col justify-between items-center text-center hover:bg-gray-300 rounded-md w-56 mx-20 "
             >
               <div className="group-hover:scale-105 hover:brightness-90 transition w-full h-28 lg:h-36 ">
                 {blog.image && (

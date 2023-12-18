@@ -16,7 +16,7 @@ export const NavLink = ({ projects, blogs }: any) => {
   };
 
   return (
-    <div className="flex justify-between px-1 lg:px-32  ">
+    <div className="flex justify-between px-1 lg:px-32 mb-10 ">
       <div id="projects" className="w-full text-center font-bold  ">
         <p
           className=" sticky top-52 hover:text-[#f2cd87] transition duration-300 text-lg md:text-xl lg:text-4xl "
