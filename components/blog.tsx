@@ -25,12 +25,6 @@ export const Blog = ({ blogs }: any) => {
     };
   }, []);
   //////////////////////////////////////////////////////
-  // const isLargeScreen = window.innerWidth >= 1024;
-
-  // const visibleBlogs = useMemo(() => {
-  //   const maxVisibleBlogs = isLargeScreen ? 6 : 3;
-  //   return blogs.slice(0, maxVisibleBlogs);
-  // }, [blogs, isLargeScreen]);
 
   return (
     <>

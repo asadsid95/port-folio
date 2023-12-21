@@ -15,10 +15,18 @@ type Props = {
 const myPortableTextComponents = {
   block: {
     h5: ({ children }: any) => (
-      <h1 className="text-xl mb-1 font-semibold">{children}</h1>
+      <h1 className="text-xl mb-1 font-semibold  text-center">{children}</h1>
     ),
     normal: ({ children }: any) => <p className="mb-1">{children}</p>,
     link: ({ children }: any) => <a href={children.href}></a>,
+  },
+  marks: {
+    code: ({ children }: any) => (
+      <p className="bg-gray-200 p-1 m-1 inline-block font-semibold">
+        {" "}
+        {children}
+      </p>
+    ),
   },
   list: {
     bullet: ({ children }: any) => (
