@@ -1,8 +1,8 @@
 export default function Footer() {
   return (
-    <div className="py-8 bg-[#f2cd87]/30 font-semibold">
+    <div className="py-8 bg-[#f2cd87]/30 font-semibold bottom-0 border-2 border-red-400 ">
       <footer>
-        <div className="flex flex-wrap gap-12 justify-evenly text-xs bottom-0 ">
+        <div className="flex flex-wrap gap-12 justify-evenly text-xs ">
           <p>&copy; 2023 Asad Siddiqui. All rights reserved.</p>
           <ul>
             <li className="hover:underline text-black/60 ">

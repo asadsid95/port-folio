@@ -28,7 +28,7 @@ export const Blog = ({ blogs }: any) => {
 
   return (
     <>
-      <div className="flex flex-col gap-6">
+      <div className="flex flex-col gap-6 h-screen border-2 border-green-500">
         <Link
           href={"/blogs"}
           className=" font-bold text-center hover:text-[#f2cd87] transition duration-300 mt-10 text-lg md:text-xl lg:text-4xl"
