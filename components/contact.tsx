@@ -4,7 +4,7 @@ import { InlineWidget } from "react-calendly";
 export default function Contact() {
   return (
     <>
-      <div className="flex flex-col lg:flex-row  gap-5 justify-center lg:items-start border-2 border-yellow-600 ">
+      <div className="flex flex-col lg:flex-row  gap-3 justify-center lg:items-start  ">
         <div className="text-lg lg:text-4xl font-bold text-center">
           <p>Let's connect</p>
         </div>
@@ -12,7 +12,12 @@ export default function Contact() {
         <div>
           <InlineWidget
             url="https://calendly.com/asadsid95/15min?hide_event_type_details=1&hide_gdpr_banner=1"
-            styles={{ height: "600px" }}
+            styles={{
+              height: "650px",
+              boxShadow: "0px 1px 1px 1px black",
+              borderRadius: "5px",
+              padding: "10px",
+            }}
           />
           <script
             type="text/javascript"

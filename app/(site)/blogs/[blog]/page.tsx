@@ -51,14 +51,14 @@ export default async function Blog({ params }: Props) {
   const formattedDate = new Date(blog._createdAt).toLocaleDateString();
 
   return (
-    <div className="flex flex-col w-full gap-5 h-screen border-2 border-purple-500 justify-between items-center px-4">
-      <header className=" text-center mt-10 border-2 border-pink-600">
+    <div className="flex flex-col w-full gap-5 h-screen  justify-between items-center px-4">
+      <header className=" text-center mt-10 ">
         <div className="text-gray-400 text-xs lg:text-sm ">
           <p>Written by Asad </p>
           <p>Created at: {formattedDate}</p>
         </div>
       </header>
-      <div className=" border-2 border-pink-600">
+      <div className=" ">
         <Image
           src={blog.image}
           alt={blog.name}

@@ -28,15 +28,15 @@ export const Blog = ({ blogs }: any) => {
 
   return (
     <>
-      <div className="flex flex-col gap-6 h-screen border-2 border-green-500">
+      <div className="flex flex-col h-screen ">
         <Link
           href={"/blogs"}
-          className=" font-bold text-center hover:text-[#f2cd87] transition duration-300 mt-10 text-lg md:text-xl lg:text-4xl"
+          className=" font-bold text-center hover:text-[#f2cd87] transition duration-300  text-lg md:text-xl lg:text-4xl"
         >
           Blog
         </Link>
         {/* <div className="flex flex-col gap-y-5 lg:flex-row items-center lg:items-start justify-around mx-5 "> */}
-        <div className="grid lg:grid-cols-3 gap-5 justify-around mx-auto">
+        <div className="grid lg:grid-cols-3 gap-5 justify-around  ">
           {blogs.slice(0, isLargeScreen ? 6 : 3).map((blog: any) => (
             <Link
               href={`/blogs/${blog.slug}`}
@@ -65,7 +65,7 @@ export const Blog = ({ blogs }: any) => {
         <div className="text-right mb-4 mr-10 lg:mr-32 text-black/60">
           <Link
             href={"/blogs"}
-            className="hover:text-[#f2cd87] hover:underline transition duration-100 text-xs font-bold lg:font-bold lg:text-sm "
+            className="hover:text-[#f2cd87] hover:underline transition duration-100 text-[10px] font-bold lg:font-bold lg:text-sm "
           >
             See more blogs -&gt;
           </Link>

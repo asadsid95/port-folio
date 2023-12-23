@@ -20,7 +20,7 @@ export default async function RootLayout({
   const pages = await getPages();
   return (
     <html lang="en">
-      <body className={`${inter.className}  border-2 border-red-500`}>
+      <body className={`${inter.className}`}>
         <main>{children}</main>
         <Footer />
       </body>
