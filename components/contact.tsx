@@ -4,7 +4,7 @@ import { InlineWidget } from "react-calendly";
 export default function Contact() {
   return (
     <>
-      <div className="flex flex-col lg:flex-row  gap-3 justify-center lg:items-start  ">
+      <div className="flex flex-col lg:flex-row gap-3 justify-center lg:items-start py-1 lg:pt-10  ">
         <div className="text-lg lg:text-4xl font-bold text-center">
           <p>Let's connect</p>
         </div>

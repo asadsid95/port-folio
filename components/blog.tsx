@@ -28,7 +28,7 @@ export const Blog = ({ blogs }: any) => {
 
   return (
     <>
-      <div className="flex flex-col h-screen ">
+      <div className="flex flex-col h-screen lg:pt-10">
         <Link
           href={"/blogs"}
           className=" font-bold text-center hover:text-[#f2cd87] transition duration-300  text-lg md:text-xl lg:text-4xl"
@@ -36,7 +36,7 @@ export const Blog = ({ blogs }: any) => {
           Blog
         </Link>
         {/* <div className="flex flex-col gap-y-5 lg:flex-row items-center lg:items-start justify-around mx-5 "> */}
-        <div className="grid lg:grid-cols-3 gap-5 justify-around  ">
+        <div className="grid lg:grid-cols-3 gap-3 justify-center lg:py-10">
           {blogs.slice(0, isLargeScreen ? 6 : 3).map((blog: any) => (
             <Link
               href={`/blogs/${blog.slug}`}
